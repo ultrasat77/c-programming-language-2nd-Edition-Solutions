@@ -1,0 +1,10 @@
+The main concern I have with the word count program in 1.5.4 is the fact that the word count program doesn't actually check for "words". To be specific, if we had the following string, " I have 15 bananas .\n", then the period at the end (as well as the number 15) would be counted as a word in our program. The key problem is that this program assumes that anything that has a space between itself and a previous character must be a word, but that is not always the case. Other tests we could use to get a better understanding of this program:
+
+- No input (EOF): ""
+This should return 0 0 0
+
+- Only special characters: "#%@&*( !*^$"
+This should return 0 2 11
+
+- Only tabs/newlines/spaces: "\n\t\n  \t"
+This should return 2 0 5
